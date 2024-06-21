@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login" id="login-form">
+            <h2>Login</h2>
+            <form id="login">
+                <div class="row">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <label for="login-username">Username</label>
+                </div>
+                <div class="row">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <label for="login-password">Password</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>You don't have an account? <a href="#" id="show-register-form">Register here</a></p>
+        </div>
+
+        <!-- Register Form -->
+        <div class="register" id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form id="register">
+                <div class="row">
+                    <input type="text" id="register-username" placeholder="Username" required>
+                    <label for="register-username">Username</label>
+                </div>
+                <div class="row">
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <label for="register-password">Password</label>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login-form">Login here</a></p>
+        </div>
+
+        <!-- To-Do List -->
+        <div class="todo-app" id="todo-app" style="display: none;">
+            <h2>To-Do List <img src="images/icon.png"></h2>
+            <div class="row">
+                <input type="text" id="task-input" placeholder="Add task">
+                <button id="add-task-button">Add</button>
+            </div>
+            <ul id="task-list"></ul>
+            <div class="logout-button">
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
